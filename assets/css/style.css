@@ -3,10 +3,17 @@
 }
 
 header {
-    font-size: xx-large;
     text-align: center;
 }
 
 body {
     background-color: black;
+}
+
+li {
+    text-align: center;
+}
+
+#future-weather-banner {
+    text-align: center;
 }

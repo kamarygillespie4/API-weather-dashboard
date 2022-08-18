@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <header class="text-bg-primary p-3">Weather Dashboard</header>
+    <header class="text-bg-primary p-3">
+        <h1>Weather Dashboard</h1>
+    </header>
     <nav class="navbar bg-light">
         <div class="container-fluid justify-content-center">
             <form class="d-flex col-6" role="search">
@@ -22,31 +24,47 @@
 
     </nav>
 
-    <div class="current-weather-div row">
+    <section class="current-weather-div row">
 
         <div class="card col-4">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">City Name</li>
-                <li class="list-group-item">Date</li>
+                <li class="list-group-item"><span id="city-name">City Name</span></li>
+                <li class="list-group-item"><span id="current-date">Date</span></li>
                 <li class="list-group-item"><img src="..." class="card-img-top" alt="..."></li>
             </ul>
         </div>
 
-
-
-
-
-
         <div class="card col-8">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Current Temperature:</li>
-                <li class="list-group-item">Current Humidity:</li>
-                <li class="list-group-item">Current Wind Speed:</li>
-                <li class="list-group-item">Current UV Index:</li>
+                <li class="list-group-item">Current Temperature: <span id="current-temperature"></span> </li>
+                <li class="list-group-item">Current Humidity: <span id="current-humidity"></span> </li>
+                <li class="list-group-item">Current Wind Speed: <span id="current-wind-speed"></span> </li>
+                <li class="list-group-item">Current UV Index: <span id="current-uv-index"></span> </li>
             </ul>
         </div>
 
+    </section>
+    <div id="future-weather-banner" class="text-bg-primary p-2">
+        <h2>Future weather conditions</h2>
     </div>
+
+
+
+    <section class="row">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                Date for weather card
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="..." class="card-img-top" alt="..."></li>
+                <li class="list-group-item">Temperature</li>
+                <li class="list-group-item">Wind Speed</li>
+                <li class="list-group-item">Humidity</li>
+            </ul>
+        </div>
+
+
+    </section>
 
 
 
