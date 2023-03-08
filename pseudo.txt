@@ -1,1 +1,0 @@
-when I click on the search button i need it to take the text value from the search bar then use an api to search for that cities lat and long and return those numbers
