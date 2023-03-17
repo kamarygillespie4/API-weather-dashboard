@@ -24,61 +24,63 @@ function TemperatureAndDetails({
   },
 }) {
   return (
-    <div>
-      <div className="">
+    <div className=" items-center justify-center bg-sky-100 p-4 mx-10 my-2 rounded-lg">
+      <div className="flex items-center justify-center  text-xl text-cyan-300">
         <p>{details}</p>
       </div>
 
-      <div className="">
-        <img src={iconUrlFromCode(icon)} alt="" className="w-20" />
-        <p className="">{`${temp.toFixed()}°`}</p>
-        <div className="">
-          <div className="">
+      <div className="flex flex-col items-center justify-center ">
+        <img src={iconUrlFromCode(icon)} alt="" className="" />
+        <p className="text-5xl ">{`${temp.toFixed()}°`}</p>
+        <div className="flex flex-col space-y-2 m-5">
+          <div className="flex font-light text-sm items-center justify-center">
             <UilTemperature size={18} className="mr-1" />
             Real fell:
-            <span className="">{`${feels_like.toFixed()}°`}</span>
+            <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
           </div>
-          <div className="">
+          <div className="flex font-light text-sm items-center justify-center">
             <UilTear size={18} className="mr-1" />
             Humidity:
-            <span className="">{`${humidity.toFixed()}%`}</span>
+            <span className="font-medium ml-1">{`${humidity.toFixed()}%`}</span>
           </div>
-          <div className="">
+          <div className="flex font-light text-sm items-center justify-center">
             <UilWind size={18} className="mr-1" />
             Wind:
-            <span className="">{`${speed.toFixed()} km/h`}</span>
+            <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span>
           </div>
         </div>
       </div>
 
-      <div className="">
+      <div className="flex flex-row items-center justify-center space-x-2 py-5 text-sm ">
         <UilSun />
-        <p className="">
+        <p className="font-light">
           Rise:{" "}
-          <span className="">
+          <span className="font-medium ml-1">
             {formatToLocalTime(sunrise, timezone, "hh:mm a")}
           </span>
         </p>
-        <p className="">|</p>
+        <p className="font-light">|</p>
 
         <UilSunset />
-        <p className="">
+        <p className="font-light">
           Set:{" "}
-          <span className="">
+          <span className="font-medium ml-1">
             {formatToLocalTime(sunset, timezone, "hh:mm a")}
           </span>
         </p>
-        <p className="">|</p>
+        <p className="font-light">|</p>
 
         <UilSun />
-        <p className="">
-          High: <span className="">{`${temp_max.toFixed()}°`}</span>
+        <p className="font-light">
+          High:{" "}
+          <span className="font-medium ml-1">{`${temp_max.toFixed()}°`}</span>
         </p>
-        <p className="">|</p>
+        <p className="font-light">|</p>
 
         <UilSun />
-        <p className="">
-          Low: <span className="">{`${temp_min.toFixed()}°`}</span>
+        <p className="font-light">
+          Low:{" "}
+          <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>
         </p>
       </div>
     </div>
