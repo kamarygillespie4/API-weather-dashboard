@@ -1,53 +1,23 @@
 import React from "react";
+import { iconUrlFromCode } from "../server/server";
 
-function Forecast({ title }) {
+function Forecast({ title, items }) {
+  console.log(items);
   return (
     <div>
-      <div className="flex items-center  justify-start mt-6">
-        <p className="tex-white font-medium uppercase text-white">{title}</p>
+      <div className="">
+        <p className="">{title}</p>
       </div>
-      <hr className="my-2" />
-      <div className="flex flex-row items-center justify-between text-white">
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">4:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt="orange circle icon"
-          />
-          <p className="font-medium">22°</p>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">4:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt="orange circle icon"
-          />
-          <p className="font-medium">22°</p>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">4:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt="orange circle icon"
-          />
-          <p className="font-medium">22°</p>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">4:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt="orange circle icon"
-          />
-          <p className="font-medium">22°</p>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <p className="font-light text-sm">4:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt="orange circle icon"
-          />
-          <p className="font-medium">22°</p>
-        </div>
+      <hr className="" />
+
+      <div className="">
+        {items.map((item, index) => (
+          <div key={index} className="">
+            <p className="">{item.title}</p>
+            <img src={iconUrlFromCode(item.icon)} className="" alt="" />
+            <p className="">{`${item.temp.toFixed()}°`}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
